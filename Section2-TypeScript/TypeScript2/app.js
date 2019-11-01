@@ -61,3 +61,7 @@ var pet2 = {
     }
 };
 pet2.bark();
+var function1 = function (name) {
+    return name.toUpperCase();
+};
+console.log(function1("Angélica Mendoza"));

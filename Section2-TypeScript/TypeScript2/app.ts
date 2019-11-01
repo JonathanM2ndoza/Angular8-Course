@@ -74,3 +74,8 @@ let pet2 = {
 
 pet2.bark();
 
+let function1 = (name:string) =>{
+  return name.toUpperCase();
+}
+console.log(function1("Angélica Mendoza"));
+
