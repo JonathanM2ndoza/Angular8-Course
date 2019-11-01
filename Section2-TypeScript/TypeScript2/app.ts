@@ -53,29 +53,66 @@ hello2("Angélica Mendoza");
 function hello3(name: string, city: string = "Caracas", country?: string) {
   let message: string;
 
-  if (country) 
-      message = `Hello ${name} vive en ${city} , Pais: ${country}`;
-  else 
-      message = `Hello ${name} vive en ${city}`;
+  if (country) message = `Hello ${name} vive en ${city} , Pais: ${country}`;
+  else message = `Hello ${name} vive en ${city}`;
 
   console.log(message);
 }
-hello3("Angélica Mendoza","Tahona","Venezuela");
+hello3("Angélica Mendoza", "Tahona", "Venezuela");
 
 //Funciones Lambda
 console.log("#####################Funciones Lambda#####################");
 
 let pet2 = {
   name: "Amber",
-  bark(){
-    setTimeout(() => console.log(this.name),1500);
+  bark() {
+    setTimeout(() => console.log(this.name), 1500);
   }
 };
 
 pet2.bark();
 
-let function1 = (name:string) =>{
+let function1 = (name: string) => {
   return name.toUpperCase();
-}
+};
 console.log(function1("Angélica Mendoza"));
+
+//Destructuración de Objetos y Arreglos
+console.log("#####################Destructuración de Objetos y Arreglos#####################");
+let pet3 = {
+  nameP: "Amber",
+  ageP: 3,
+  breedP: "Golden Retriever"
+};
+
+let { nameP, ageP, breedP } = pet3;
+console.log(nameP, ageP, breedP);
+
+let pets4:string [] = ["Amber" , "Noche" , "Dia"]
+let[var1, var2, var3] = pets4;
+console.log(var1,var2,var3);
+
+//Promesas en ES6
+console.log("#####################Promesas en ES6#####################");
+let promise1 = new Promise(function(resolve , reject){
+  setTimeout(()=>{
+    console.log("Promise Finished");
+    
+    //Success
+    resolve();
+
+    //Error
+    //reject();
+
+  },1500);
+});
+
+promise1.then(
+  function(){
+    console.log("It runs when successful.");
+  },
+  function(){
+    console.log("It runs when error.");
+  } 
+)
 

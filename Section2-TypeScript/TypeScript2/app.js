@@ -1,67 +1,93 @@
 "use strict";
 //Tipos de datos
 console.log("#####################Tipos de datos#####################");
-var name1 = "Amber";
-var number1 = 3;
-var boolean1 = true;
-var today1 = new Date();
+let name1 = "Amber";
+let number1 = 3;
+let boolean1 = true;
+let today1 = new Date();
 console.log(today1);
-var anyone;
+let anyone;
 anyone = number1;
 console.log(anyone);
-var pet = {
+let pet = {
     name: "Amber",
     age: 3
 };
 console.log("Name: " + pet.name + " | Edad: " + pet.age);
 //Templates literales
 console.log("#####################Templates literales#####################");
-var template_texto = "Hello,\n" + name1 + " (" + number1 + ") ";
+let template_texto = `Hello,
+${name1} (${number1}) `;
 console.log(template_texto);
 function getName() {
     return "Amber Mendoza";
 }
-var template_texto2 = "" + getName();
+let template_texto2 = `${getName()}`;
 console.log(template_texto2);
 //Funciones: parámetros opcionales, obligatorios y por defecto.
 console.log("#####################Funciones y parámetros#####################");
 //Parámetro Obligatorio
 function hello(name) {
-    var message;
-    message = "Hello " + name;
+    let message;
+    message = `Hello ${name}`;
     console.log(message);
 }
 hello("Angélica Mendoza");
 //Parámetro por defecto
-function hello2(name, city) {
-    if (city === void 0) { city = "Caracas"; }
-    var message;
-    message = "Hello " + name + " vive en " + city;
+function hello2(name, city = "Caracas") {
+    let message;
+    message = `Hello ${name} vive en ${city}`;
     console.log(message);
 }
 hello2("Angélica Mendoza");
 //Parámetro opcional
-function hello3(name, city, country) {
-    if (city === void 0) { city = "Caracas"; }
-    var message;
+function hello3(name, city = "Caracas", country) {
+    let message;
     if (country)
-        message = "Hello " + name + " vive en " + city + " , Pais: " + country;
+        message = `Hello ${name} vive en ${city} , Pais: ${country}`;
     else
-        message = "Hello " + name + " vive en " + city;
+        message = `Hello ${name} vive en ${city}`;
     console.log(message);
 }
 hello3("Angélica Mendoza", "Tahona", "Venezuela");
 //Funciones Lambda
 console.log("#####################Funciones Lambda#####################");
-var pet2 = {
+let pet2 = {
     name: "Amber",
-    bark: function () {
-        var _this = this;
-        setTimeout(function () { return console.log(_this.name); }, 1500);
+    bark() {
+        setTimeout(() => console.log(this.name), 1500);
     }
 };
 pet2.bark();
-var function1 = function (name) {
+let function1 = (name) => {
     return name.toUpperCase();
 };
 console.log(function1("Angélica Mendoza"));
+//Destructuración de Objetos y Arreglos
+console.log("#####################Destructuración de Objetos y Arreglos#####################");
+let pet3 = {
+    nameP: "Amber",
+    ageP: 3,
+    breedP: "Golden Retriever"
+};
+let { nameP, ageP, breedP } = pet3;
+console.log(nameP, ageP, breedP);
+let pets4 = ["Amber", "Noche", "Dia"];
+let [var1, var2, var3] = pets4;
+console.log(var1, var2, var3);
+//Promesas en ES6
+console.log("#####################Promesas en ES6#####################");
+let promise1 = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        console.log("Promise Finished");
+        //Success
+        resolve();
+        //Error
+        //reject();
+    }, 1500);
+});
+promise1.then(function () {
+    console.log("It runs when successful.");
+}, function () {
+    console.log("It runs when error.");
+});
