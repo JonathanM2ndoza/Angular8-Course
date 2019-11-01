@@ -1,0 +1,6 @@
+jmendoza@jmendoza-ThinkPad-T420:~$ sudo npm install -g @angular/cli
+
+jmendoza@jmendoza-ThinkPad-T420:~$ ng v
+
+
+

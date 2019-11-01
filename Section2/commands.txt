@@ -1,0 +1,9 @@
+##############Compilar un archivo particular##############
+jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc app1.ts
+jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc app1.ts -w
+
+##############Compila todos los archivos TypeScript##############
+jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc -init
+jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc
+
+
