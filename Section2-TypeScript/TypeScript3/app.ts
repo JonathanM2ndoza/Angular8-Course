@@ -23,3 +23,4 @@ function bye(pet: Pet) {
 
 hello(amber);
 bye(amber);
+
