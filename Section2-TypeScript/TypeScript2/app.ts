@@ -61,3 +61,16 @@ function hello3(name: string, city: string = "Caracas", country?: string) {
   console.log(message);
 }
 hello3("Angélica Mendoza","Tahona","Venezuela");
+
+//Funciones Lambda
+console.log("#####################Funciones Lambda#####################");
+
+let pet2 = {
+  name: "Amber",
+  bark(){
+    setTimeout(() => console.log(this.name),1500);
+  }
+};
+
+pet2.bark();
+
