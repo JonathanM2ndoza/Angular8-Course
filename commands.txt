@@ -1,3 +1,7 @@
+##############Git##############
+git config --global user.name your_username
+git config --global user.password yourpassword
+
 ##############Compilar un archivo particular##############
 jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc app1.ts
 jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc app1.ts -w
@@ -14,3 +18,4 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1$ su
 
 ##############Run new project##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1/App1$ sudo ng serve -o
+
