@@ -1,7 +1,5 @@
 ##############Git##############
-git config --global user.name your_username
-git config --global user.password yourpassword
-git config --global credential.helper 'cache --timeout=14400'
+git config --global credential.helper 'cache --timeout=28800'
 
 ##############Compilar un archivo particular##############
 jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc app1.ts
