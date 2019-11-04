@@ -22,6 +22,8 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1/App
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1/App1/src/app$ ng generate component components/footer
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/shared/navbar
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/home
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/about
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/heroes -is
 
 ##############Install Bootstrap##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ npm install bootstrap --save
