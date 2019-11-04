@@ -1,11 +1,11 @@
 ##############Git##############
 git config --global credential.helper 'cache --timeout=28800'
 
-##############Compilar un archivo particular##############
+##############Compile one file TypeScript##############
 jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc app1.ts
 jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc app1.ts -w
 
-##############Compila todos los archivos TypeScript##############
+##############Compile all file TypeScript##############
 jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc -init
 jmendoza@jmendoza-ThinkPad-T420:~/Documentos/Angular/Curso/Section2/TypeScript1$ tsc
 
@@ -19,4 +19,26 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1$ su
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1/App1$ sudo ng serve -o
 
 ##############Component##############
-jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1/App1/src/app$ ng g component components/footer
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1/App1/src/app$ ng generate component components/footer
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/shared/navbar
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/home
+
+##############Install Bootstrap##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ npm install bootstrap --save
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ npm install jquery --save
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ npm install popper.js --save
+
+ Include files into angular.json
+
+"styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
+"scripts": [
+    "node_modules/jquery/dist/jquery.slim.min.js",
+    "node_modules/popper.js/dist/umd/popper.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
+
+##############Install##############
+
