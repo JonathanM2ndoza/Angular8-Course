@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  getHero(event: any , text: string){
-    console.log(text);
+  getHero(event: any , name: string){
+    console.log(name);
     event.preventDefault();
+    this.router.navigate(['/search', name]);
   }
 
 }
