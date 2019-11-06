@@ -17,9 +17,8 @@ export class HeroesComponent implements OnInit {
     console.log(this.heroes);
   }
 
-  showHeroe(id: number){
+  /*showHeroe(id: number){
     console.log("HeroesComponent " + id);
     this.router.navigate(['/heroe', id]);
-  }
-
+  }*/
 }

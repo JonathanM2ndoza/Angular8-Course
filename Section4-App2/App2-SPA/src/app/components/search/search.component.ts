@@ -20,8 +20,4 @@ export class SearchComponent implements OnInit {
       this.heroes = this.heroesService.getHeroesByName(params['name']);
     });
   }
-
-  showHeroe(id: number){
-    this.router.navigate(['/heroe', id]);
-  }
 }
