@@ -11,4 +11,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  getHero(event: any , text: string){
+    console.log(text);
+    event.preventDefault();
+  }
+
 }

@@ -10,6 +10,13 @@ body{
   width: 120px;
 }
 
+footer{
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
 /* Animations*/
 .animated {
     -webkit-animation-duration: 1s;
