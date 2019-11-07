@@ -15,6 +15,8 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1$ su
 ? Would you like to add Angular routing? No
 ? Which stylesheet format would you like to use? CSS
 
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course$ sudo chmod -R 777 Section3-App1
+
 ##############Run new project##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section3-App1/App1$ sudo ng serve -o
 
@@ -46,5 +48,4 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App
     "node_modules/bootstrap/dist/js/bootstrap.min.js"
 ]
 
-##############Install##############
 
