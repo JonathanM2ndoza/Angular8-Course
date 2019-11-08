@@ -70,17 +70,59 @@
         <tr>
             <td>{{salary}}</td>
             <td>currency:'EUR':true</td>
-            <td>{{salary | currency:'EUR':true}}</td>
+            <td>{{salary | currency:'EUR':'symbol'}}</td>
         </tr>
         <tr>
             <td>{{salary}}</td>
             <td>currency:'EUR':true:'4.0-0'</td>
-            <td>{{salary | currency:'EUR':true:'4.0-0'}}</td>
+            <td>{{salary | currency:'EUR':'symbol':'4.0-0'}}</td>
         </tr>
         <tr>
             <td>{{salary}}</td>
             <td>number:'.2-2'</td>
             <td>{{salary | number:'.2-2'}}</td>
+        </tr>
+        <tr>
+            <td>{{promise1}}</td>
+            <td>async</td>
+            <td>{{promise1 | async}}</td>
+        </tr>
+        <tr>
+            <td>{{date1}}</td>
+            <td>date</td>
+            <td>{{date1}}</td>
+        </tr>
+        <tr>
+            <td>{{date1}}</td>
+            <td>date:'medium'</td>
+            <td>{{date1 | date:'medium'}}</td>
+        </tr>
+        <tr>
+            <td>{{date1}}</td>
+            <td>date:'MMMM - dd'</td>
+            <td>{{date1 | date:'MMMM - dd'}}</td>
+        </tr>
+        <tr>
+            <td>{{name2}}</td>
+            <td>capitalizado</td>
+            <td>{{name2 | capitalizado}}</td>
+        </tr>
+        <tr>
+            <td>{{name2}}</td>
+            <td>capitalizado:false</td>
+            <td>{{name2 | capitalizado:false}}</td>
+        </tr>
+        <tr>
+            <td>{{name}}</td>
+            <td>
+                contrasena: {{activar}}
+            <br>
+            <button (click)="activar = !activar" type="button" class="btn btn-outline-primary">
+                Activar/Desactivar
+            </button>
+            </td>
+        
+            <td>{{name | contrasena:activar}}</td>
         </tr>
       </tbody>
     </table>
@@ -90,5 +132,13 @@
       <li *ngFor="let item of array | slice:5:20">{{item}}</li>
     </ul>
 
+    <h4>JSON</h4>
+    <pre>{{pet | json}}</pre>
+
+    <h4>YouTube <small>video</small></h4>
+    <hr>
+    <iframe width="560" height="315" [src]=" video1 | domseguro: 'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </div>
+<br>
+<br>
