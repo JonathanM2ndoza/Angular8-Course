@@ -29,7 +29,7 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/heroe -is
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/footer -is
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/search -is
-jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/heroCard --spec=false
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/heroCard --spec=false -is
 
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section5-App3/App3-Pipes$ ng generate pipe pipes/domseguro --spec=false
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section5-App3/App3-Pipes$ ng generate pipe pipes/contrasena --spec=false
@@ -50,5 +50,3 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App
     "node_modules/popper.js/dist/umd/popper.min.js",
     "node_modules/bootstrap/dist/js/bootstrap.min.js"
 ]
-
-
