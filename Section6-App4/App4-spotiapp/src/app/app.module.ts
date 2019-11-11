@@ -11,7 +11,8 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 import { ROUTES } from './app.routes';
-import { HttpClient } from 'selenium-webdriver/http';
+
+import { SpotifyService } from './services/spotify.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { HttpClient } from 'selenium-webdriver/http';
     HttpClientModule,
     RouterModule.forRoot( ROUTES, {useHash: true} )
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
