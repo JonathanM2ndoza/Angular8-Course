@@ -11,12 +11,14 @@ export class ArtistComponent implements OnInit {
 
   artist: any = {};
   loading: boolean;
-  
+  topTracks: any[] = []; 
+
   constructor(private activatedRoute: ActivatedRoute,
               private spotifyService: SpotifyService) {
     this.loading = true;
     this.activatedRoute.params.subscribe(params => {
     this.getArtist(params['id']);
+    this.getTopTracks(params['id']);
     });
   }
 
@@ -25,11 +27,19 @@ export class ArtistComponent implements OnInit {
 
   getArtist( artistId: string) {
     this.spotifyService.getArtist(artistId)
-    .subscribe(artist => {
-      console.log(artist);
-      this.artist = artist;
-      this.loading = false;
-    });
+        .subscribe(artist => {
+          console.log(artist);
+          this.artist = artist;
+          this.loading = false;
+        });
+  }
+
+  getTopTracks(artistId: string) {
+    this.spotifyService.getTopTracks(artistId)
+        .subscribe(topTracks => {
+        console.log(topTracks);
+        this.topTracks = topTracks;
+        });
   }
 
 }
