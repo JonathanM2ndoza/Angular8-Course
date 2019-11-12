@@ -16,15 +16,14 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchArtist(keyArtist: string){
+  getArtists(keyArtist: string){
     console.log(keyArtist);
     this.loading = true;
-    this.spotifyService.getArtist(keyArtist)
+    this.spotifyService.getArtists(keyArtist)
     .subscribe( (resp: any) => {
       console.log(resp);
       this.artists = resp;
       this.loading = false;
     });
   }
-
 }
