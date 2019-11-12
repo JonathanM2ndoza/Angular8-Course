@@ -11,7 +11,7 @@ export class ArtistComponent implements OnInit {
 
   artist: any = {};
   loading: boolean;
-  topTracks: any[] = []; 
+  topTracks: any[] = [];
 
   constructor(private activatedRoute: ActivatedRoute,
               private spotifyService: SpotifyService) {
