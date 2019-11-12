@@ -28,6 +28,7 @@ export class SearchComponent implements OnInit {
       console.log(resp);
       this.artists = resp;
       this.loading = false;
+      this.error = false;
     }, (errorResp) => {
       this.loading = false;
       this.error = true;
