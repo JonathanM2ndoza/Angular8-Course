@@ -58,7 +58,11 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App
 
 ##############Ionic##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5$ ionic start App5-WishList tabs
-jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/WishList-App5$ ionic serve
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/WishList-App5$ ionic serve -c
 
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic cordova prepare
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic serve --devapp
+
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic generate service services/wishes --spec
+
+
