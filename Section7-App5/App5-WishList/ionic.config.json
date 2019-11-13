@@ -1,0 +1,7 @@
+{
+  "name": "App5-WishList",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
