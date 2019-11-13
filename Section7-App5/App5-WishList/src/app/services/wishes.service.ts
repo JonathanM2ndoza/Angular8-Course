@@ -9,6 +9,8 @@ export class WishesService {
   list: List[] = [];
 
   constructor() {
-    console.log('WishesService Ready! ');
+    const list1 = new List('Recolectar piedas del infinito');
+    const list2 = new List('Buscar heroes');
+    this.list.push(list1, list2);
   }
 }
