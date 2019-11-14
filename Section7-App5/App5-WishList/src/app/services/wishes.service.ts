@@ -13,4 +13,10 @@ export class WishesService {
     const list2 = new List('Buscar heroes');
     this.list.push(list1, list2);
   }
+  
+  createList(tittle: string) {
+    const newList = new List(tittle);
+    this.list.push(newList);
+  }  
+
 }
