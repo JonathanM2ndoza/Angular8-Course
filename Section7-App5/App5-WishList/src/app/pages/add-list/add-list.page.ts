@@ -47,4 +47,10 @@ export class AddListPage implements OnInit {
     console.log(this.list);
     this.wishesService.saveStorage();
   }
+
+  delete(id: number) {
+    const index = this.list.items.findIndex(item => item.id === id);
+    this.list.items.splice(index, 1);
+    this.wishesService.saveStorage();
+  }
 }
