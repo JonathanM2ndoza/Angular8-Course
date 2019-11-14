@@ -54,4 +54,8 @@ export class Tab1Page {
 
    alert.present();
   }
+
+  showList(list: List) {
+    this.router.navigateByUrl(`/tabs/tab1/add-list/${list.id}`);
+  }
 }

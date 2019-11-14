@@ -9,8 +9,9 @@
 <ion-content color="dark">
   
   <ion-list color="dark">
-    <ion-item *ngFor="let list1 of list" detail color="dark">
+    <ion-item *ngFor="let list1 of list" detail color="dark" (click)="showList(list1)">
       <ion-label>{{list1.title}}</ion-label>
+      <ion-note slot="end" color="tertiary">{{ list1.items.length }}</ion-note>
     </ion-item>
   </ion-list>
 
