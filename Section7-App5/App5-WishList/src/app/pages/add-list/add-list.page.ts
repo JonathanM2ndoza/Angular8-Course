@@ -33,4 +33,18 @@ export class AddListPage implements OnInit {
     this.wishesService.saveStorage();
   }
 
+  checkboxChange(item: Item) {
+    const pending = this.list.items
+                        .filter( itemData => !itemData.done)
+                        .length;
+    if(pending === 0 ) {
+      this.list.endDate = new Date();
+      this.list.done = true;
+    } else {
+      this.list.endDate = null;
+      this.list.done = false;
+    }
+    console.log(this.list);
+    this.wishesService.saveStorage();
+  }
 }

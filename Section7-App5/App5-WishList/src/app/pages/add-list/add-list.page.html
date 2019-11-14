@@ -24,8 +24,8 @@
       <ion-label>Tareas pendientes</ion-label>
     </ion-list-header>
 
-    <ion-item color="dark" *ngFor="let item of list.items">
-        <ion-checkbox slot="start" color="tertiary" [(ngModel)]="item.done"></ion-checkbox>
+    <ion-item color="dark" *ngFor="let item of list.items" class = "animated fadeInDown">
+        <ion-checkbox slot="start" color="tertiary" [(ngModel)]="item.done" (ionChange)="checkboxChange(item)"></ion-checkbox>
         <ion-label>{{item.description}}</ion-label>
     </ion-item>
   </ion-list>
