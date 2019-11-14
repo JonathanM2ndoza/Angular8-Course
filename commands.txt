@@ -66,4 +66,7 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic generate service services/wishes --spec
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic generate page pages/addList
 
+############ module, component ##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic generate module components
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic generate component components/list
 
