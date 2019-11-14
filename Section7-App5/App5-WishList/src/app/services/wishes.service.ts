@@ -9,14 +9,22 @@ export class WishesService {
   list: List[] = [];
 
   constructor() {
-    const list1 = new List('Recolectar piedas del infinito');
-    const list2 = new List('Buscar heroes');
-    this.list.push(list1, list2);
+    this.loadStorage();
   }
-  
+
   createList(tittle: string) {
     const newList = new List(tittle);
     this.list.push(newList);
-  }  
+    this.saveStorage();
+  }
 
+  saveStorage() {
+    localStorage.setItem('data', JSON.stringify(this.list));
+  }
+
+  loadStorage() {
+    if(localStorage.getItem('data')) {
+      this.list = JSON.parse(localStorage.getItem('data'));
+    }
+  }
 }
