@@ -20,7 +20,6 @@ export class Tab1Page {
   }
 
   async addList() {
-    // this.router.navigateByUrl('/tabs/tab1/add-list');
 
       const alert = await this.alertController.create({
       header: 'Nueva lista',
@@ -46,7 +45,8 @@ export class Tab1Page {
           if ( data.tittle.length === 0 ) {
             return;
           }
-          this.wishesService.createList(data.tittle);
+          const listId = this.wishesService.createList(data.tittle);
+          this.router.navigateByUrl(`/tabs/tab1/add-list/${listId}`);
           }
         }
       ]
