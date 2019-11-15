@@ -19,6 +19,11 @@ export class WishesService {
     return newList.id;
   }
 
+  deleteList(listId: number) {
+    const index = this.list.findIndex(listData => listData.id === listId);
+    this.list.splice(index, 1);
+  }
+
   getList(listId: string | number) {
     listId = Number(listId);
     return this.list.find( listData => listData.id === listId);

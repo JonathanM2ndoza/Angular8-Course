@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WishesService } from '../../services/wishes.service';
 import { List } from '../../models/list.model';
 import { Router } from '@angular/router';
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ListComponent {
 
   list: List[] = [];
+  @Input() tab2 = true;
   
   constructor(public wishesService: WishesService,
               private router: Router) {
@@ -18,7 +19,16 @@ export class ListComponent {
   }
 
   showList(list: List) {
-    this.router.navigateByUrl(`/tabs/tab1/add-list/${list.id}`);
+    if(this.tab2) {
+      this.router.navigateByUrl(`/tabs/tab2/add-list/${list.id}`);
+    } else {
+      this.router.navigateByUrl(`/tabs/tab1/add-list/${list.id}`);
+    }
+  }
+
+  deleteList(listId: number) {
+    this.wishesService.deleteList(listId);
+    this.wishesService.saveStorage();
   }
 
 }

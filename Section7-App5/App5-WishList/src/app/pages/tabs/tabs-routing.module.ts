@@ -28,6 +28,11 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+          },
+          {
+            path: 'add-list/:listId',
+            loadChildren: () =>
+              import('../add-list/add-list.module').then(m => m.AddListPageModule)
           }
         ]
       },
