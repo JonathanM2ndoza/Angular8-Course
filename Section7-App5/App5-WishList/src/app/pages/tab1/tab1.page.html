@@ -7,14 +7,9 @@
 </ion-header>
 
 <ion-content color="dark">
-  
-  <ion-list color="dark">
-    <ion-item *ngFor="let list1 of list" detail color="dark" (click)="showList(list1)">
-      <ion-label>{{list1.title}}</ion-label>
-      <ion-note slot="end" color="tertiary">{{ list1.items.length }}</ion-note>
-    </ion-item>
-  </ion-list>
 
+  <app-list></app-list>
+  
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button color="tertiary" (click)="addList()">
         <ion-icon name="add"></ion-icon>

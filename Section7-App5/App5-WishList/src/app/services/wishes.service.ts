@@ -29,7 +29,7 @@ export class WishesService {
   }
 
   loadStorage() {
-    if(localStorage.getItem('data')) {
+    if (localStorage.getItem('data')) {
       this.list = JSON.parse(localStorage.getItem('data'));
     }
   }
