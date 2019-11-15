@@ -1,6 +1,6 @@
 <ion-list color="dark">
 
-    <ion-item-sliding *ngFor="let list1 of list" >      
+    <ion-item-sliding *ngFor="let list1 of list | filterCompleted:tab2" >      
       
       <ion-item detail color="dark" (click)="showList(list1)">
         <ion-label>{{list1.title}}</ion-label>
