@@ -11,7 +11,13 @@
           <ion-item-option (click)="deleteList(list1.id)" color="danger">
               <ion-icon slot="icon-only" name="close"></ion-icon>
           </ion-item-option>
-        </ion-item-options>
+      </ion-item-options>
+
+      <ion-item-options side="start">
+        <ion-item-option (click)="updateList(list1)" color="primary">
+            <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+    </ion-item-options>
 
     </ion-item-sliding>
 

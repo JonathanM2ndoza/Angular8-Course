@@ -24,6 +24,11 @@ export class WishesService {
     this.list.splice(index, 1);
   }
 
+  updateList(listId: number, nameList: string) {
+    const list =  this.getList(listId);
+    list.title = nameList;
+  }
+
   getList(listId: string | number) {
     listId = Number(listId);
     return this.list.find( listData => listData.id === listId);
