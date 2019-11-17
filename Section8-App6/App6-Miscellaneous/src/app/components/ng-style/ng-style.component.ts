@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-ng-style',
   template: `
     <p [style.fontSize.px]="size" >
-      Hello World.. this is a tag
+      Hello World.. this is a tag (ngStyle / style)
     </p>
 
     <button class="btn btn-primary " (click)="size = size + 5 ">
