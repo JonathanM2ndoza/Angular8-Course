@@ -6,6 +6,7 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { CssComponent } from './components/css/css.component';
 import { ClassComponent } from './components/class/class.component';
 import { RemarkDirective } from './directives/remark.directive';
+import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { RemarkDirective } from './directives/remark.directive';
     NgStyleComponent,
     CssComponent,
     ClassComponent,
-    RemarkDirective
+    RemarkDirective,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule
