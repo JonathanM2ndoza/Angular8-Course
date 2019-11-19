@@ -32,6 +32,7 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/heroCard --spec=false -is
 
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section8-App6/App6-Miscellaneous$ ng generate component components/user/newUser -is -it --flat
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section9-App7/App7-Auth0$ ng generate component components/navbar -is --skipTests
 
 ##############Pipes##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section5-App3/App3-Pipes$ ng generate pipe pipes/domseguro --spec=false
