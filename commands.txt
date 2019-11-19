@@ -31,6 +31,8 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/search -is
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ ng generate component components/heroCard --spec=false -is
 
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section8-App6/App6-Miscellaneous$ ng generate component components/user/newUser -is -it --flat
+
 ##############Pipes##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section5-App3/App3-Pipes$ ng generate pipe pipes/domseguro --spec=false
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section5-App3/App3-Pipes$ ng generate pipe pipes/contrasena --spec=false
