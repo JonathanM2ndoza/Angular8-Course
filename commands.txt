@@ -42,6 +42,8 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section5-App3/App
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section6-App4/App4-spotiapp$ ng generate service services/spotify --spec=false
 - Include service in app.module.ts or use Decorador: Injectable ({providedIn: 'root'})
 
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section9-App7/App7-Auth0$ ng generate service services/auth --skipTests
+
 ##############ngStyle##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section8-App6/App6-Miscellaneous$ ng generate component components/ngStyle -it -is
 
@@ -82,3 +84,7 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App
 
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic generate module pipes
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App5-WishList$ ionic generate pipe pipes/filterCompleted
+
+
+##############Install Auth0##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course$ sudo npm install @auth0/auth0-spa-js --save
