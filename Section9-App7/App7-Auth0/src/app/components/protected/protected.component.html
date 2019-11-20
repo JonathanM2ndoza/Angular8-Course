@@ -1,1 +1,6 @@
-<p>protected works!</p>
+<h1>User Profile</h1>
+<hr>
+
+<pre *ngIf="auth.userProfile$ | async as profile">
+    <code>{{ profile | json }}</code>
+</pre>
