@@ -17,7 +17,7 @@ export class RegistroComponent implements OnInit {
     this.user = new User();
   }
 
-  onSubmit(registForm: NgForm) {
+  onRegister(registForm: NgForm) {
     if (registForm.invalid) { return; }
     console.log(this.user);
     console.log(registForm);
