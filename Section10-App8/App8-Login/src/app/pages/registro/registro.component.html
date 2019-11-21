@@ -10,7 +10,10 @@
                         Crear nueva cuenta
                     </span>
     
-                    <!-- <span class="text-danger">El correo es obligatorio</span> -->
+                    <span 
+                        *ngIf="registForm.submitted && registForm.controls['email'].errors" 
+                        class="text-danger animated fadeIn">
+                        El correo es obligatorio</span>
                     <div class="wrap-input100 m-b-16">
                         <input class="input100" 
                                type="email" 
@@ -23,7 +26,10 @@
                         <span class="focus-input100"></span>
                     </div>
 
-                    <!-- <span class="text-danger">El nombre es obligatorio</span> -->
+                    <span 
+                    *ngIf="registForm.submitted && registForm.controls['nombre'].errors" 
+                    class="text-danger animated fadeIn">
+                    El nombre es obligatorio</span>
                     <div class="wrap-input100 m-b-16">
                         <input class="input100" 
                                type="text" 
@@ -36,11 +42,14 @@
                         <span class="focus-input100"></span>
                     </div>
                     
-                    <!-- <span class="text-danger">La contraseña debe de ser más de 6 letras</span> -->
-                    <div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                    <span 
+                    *ngIf="registForm.submitted && registForm.controls['password'].errors" 
+                    class="text-danger animated fadeIn">
+                    La contraseña debe de ser más de 6 letras</span>
+                    <div class="wrap-input100 m-b-16">
                         <input class="input100"
                                type="password" 
-                               name="pass" 
+                               name="password" 
                                required
                                minlength="6"
                                [(ngModel)]="user.password"
