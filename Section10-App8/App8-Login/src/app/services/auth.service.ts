@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   logout() {
-
+    localStorage.removeItem('idToken');
   }
 
   login(user: User) {
@@ -64,9 +64,13 @@ export class AuthService {
 
     this.idToken = idToken;
     localStorage.setItem('idToken', idToken);
+
+    const today1 = new Date();
+    today1.setSeconds(3600);
+    localStorage.setItem('expire', today1.getTime().toString());
   }
 
-  private getToken(){
+  private getToken() {
     if (localStorage.getItem('idToken')) {
       this.idToken = localStorage.getItem('idToken');
     } else {
@@ -76,7 +80,17 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    return this.idToken.length > 2;
-  }
+    if (this.idToken.length < 2) {
+      return false;
+    }
+    const expire = Number(localStorage.getItem('expire'));
+    const expireDate = new Date();
+    expireDate.setTime(expire);
 
+    if (expireDate > new Date()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
