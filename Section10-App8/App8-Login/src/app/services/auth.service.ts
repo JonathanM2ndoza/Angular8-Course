@@ -23,10 +23,27 @@ export class AuthService {
 
   login(user: User) {
 
+    const bodyPayload = {
+      ...user,
+      returnSecureToken: true
+    };
+    return this.httpClient.post(
+      `${this.endPoint}signInWithPassword?key=${this.apiKey}`,
+      bodyPayload
+    );
+
   }
 
   signUp(user: User) {
 
+    const bodyPayload = {
+      ...user,
+      returnSecureToken: true
+    };
+    return this.httpClient.post(
+      `${this.endPoint}signUp?key=${this.apiKey}`,
+      bodyPayload
+    );
   }
 
 }
