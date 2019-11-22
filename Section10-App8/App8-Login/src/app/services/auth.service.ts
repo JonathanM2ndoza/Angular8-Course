@@ -18,12 +18,13 @@ export class AuthService {
   // Login user
   // https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
 
-  constructor(private httpClient: HttpClient) { 
+  constructor(private httpClient: HttpClient) {
     this.getToken();
   }
 
   logout() {
     localStorage.removeItem('idToken');
+    localStorage.removeItem('expire');
   }
 
   login(user: User) {
