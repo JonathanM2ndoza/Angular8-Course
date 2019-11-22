@@ -53,6 +53,7 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section8-App6/App
 ##############Guard##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section9-App7/App7-Auth0$ ng generate guard services/auth --skipTests
 ? Which interfaces would you like to implement? CanActivate
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section10-App8/App8-Login$ ng generate guard guards/auth --skipTests
 
 ##############Install Bootstrap##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App2-SPA$ npm install bootstrap --save

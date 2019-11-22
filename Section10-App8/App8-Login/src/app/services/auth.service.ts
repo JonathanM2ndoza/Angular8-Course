@@ -74,4 +74,9 @@ export class AuthService {
     }
     return this.idToken;
   }
+
+  isAuthenticated(): boolean {
+    return this.idToken.length > 2;
+  }
+
 }
