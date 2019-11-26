@@ -10,12 +10,28 @@ export class DataComponent {
 
   form: FormGroup;
 
-  constructor() {
+  user: Object = {
+    fullName: {
+      name: 'Angelica',
+      surname: 'Mendoza'
+    },
+    email: 'am@gmail.com'
+  };
 
+  constructor() {
     this.form = new FormGroup({
-      'name': new FormControl('Jonathan'),
-      'surname': new FormControl(),
-      'email': new FormControl()
+
+      fullName: new FormGroup({
+        name: new FormControl('', [
+          Validators.required,
+          Validators.minLength(3)
+       ]),
+        surname: new FormControl('', Validators.required)
+      }),
+      email: new FormControl('', [
+                                    Validators.required,
+                                    Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')
+                                  ])
     });
   }
 
