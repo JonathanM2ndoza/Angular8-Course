@@ -61,6 +61,21 @@
     </div>
   </div>
 
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Hobby</label>
+    <div class="col-md-8" formArrayName="hobby">
+      <input  *ngFor="let h of form.controls['hobby'].controls; let i = index"
+              [formControlName]="i"
+              type="text" 
+              class="form-control">
+    </div>
+    <button (click)="saveHobby()"
+            type="button"
+            class="btn btn-primary">
+          Nuevo
+    </button>
+  </div>
+
 
 
   <div class="form-group row">
@@ -72,6 +87,6 @@
     </div>
   </div>
 
-  <!-- {{form.valid}} -->
+   {{form.valid}} 
 
 </form>

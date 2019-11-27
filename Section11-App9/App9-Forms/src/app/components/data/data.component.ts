@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormGroupDirective } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-data',
@@ -16,28 +16,47 @@ export class DataComponent {
       surname: 'Mendoza'
     },
     email: 'am@gmail.com'
+    //hobby: ['English', 'Read']
   };
 
   constructor() {
     this.form = new FormGroup({
 
       fullName: new FormGroup({
-        name: new FormControl('', [
+        name: new FormControl(/*this.user['fullName'].name*/'', [
           Validators.required,
           Validators.minLength(3)
        ]),
-        surname: new FormControl('', Validators.required)
+        surname: new FormControl(/*this.user['fullName'].surname*/'', Validators.required)
       }),
-      email: new FormControl('', [
+      email: new FormControl(/*this.user['email']*/'', [
                                     Validators.required,
                                     Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')
-                                  ])
+                                  ]),
+      hobby: new FormArray([
+        new FormControl('English', Validators.required)
+      ])
     });
+    // this.form.setValue(this.user);
   }
 
   save() {
     console.log(this.form.value);
     console.log(this.form);
+    this.form.reset({
+      fullName: {
+        name: '',
+        surname: ''
+      },
+      email: ''
+    });
+    // this.form.controls['email'].setValue('');
+  }
+
+  saveHobby() {
+    (<FormArray>this.form.controls['hobby']).push(
+      new FormControl('', Validators.required)
+    )
   }
 
 }
