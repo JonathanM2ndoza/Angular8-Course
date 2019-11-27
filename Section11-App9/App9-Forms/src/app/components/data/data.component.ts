@@ -35,9 +35,16 @@ export class DataComponent {
                                   ]),
       hobby: new FormArray([
         new FormControl('English', Validators.required)
-      ])
+      ]),
+      password1: new FormControl('', Validators.required),
+      password2: new FormControl()
     });
     // this.form.setValue(this.user);
+
+    this.form.controls['password2'].setValidators([
+      Validators.required,
+      this.validatePassword
+    ]);
   }
 
   save() {
@@ -60,9 +67,18 @@ export class DataComponent {
   }
 
   validateSurname(formControl: FormControl): {[s: string]: boolean} {
-    if (formControl.value === 'Mendoza') {
+    if (formControl.value === 'Mendoza1') {
       return {
         validateName: true
+      };
+    }
+    return null;
+  }
+
+  validatePassword = (formControl: FormControl): {[s: string]: boolean}  => {
+    if (formControl.value !== this.form.controls['password1'].value) {
+      return {
+        validatePassword: true
       };
     }
     return null;
