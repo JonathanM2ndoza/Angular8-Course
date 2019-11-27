@@ -27,7 +27,7 @@ export class DataComponent {
           Validators.required,
           Validators.minLength(3)
        ]),
-        surname: new FormControl(/*this.user['fullName'].surname*/'', Validators.required)
+        surname: new FormControl(/*this.user['fullName'].surname*/'', [Validators.required, this.validateSurname])
       }),
       email: new FormControl(/*this.user['email']*/'', [
                                     Validators.required,
@@ -43,20 +43,29 @@ export class DataComponent {
   save() {
     console.log(this.form.value);
     console.log(this.form);
-    this.form.reset({
+   /*this.form.reset({
       fullName: {
         name: '',
         surname: ''
       },
       email: ''
-    });
+    });*/
     // this.form.controls['email'].setValue('');
   }
 
   saveHobby() {
     (<FormArray>this.form.controls['hobby']).push(
       new FormControl('', Validators.required)
-    )
+    );
   }
 
+  validateSurname(formControl: FormControl): {[s: string]: boolean} {
+    if (formControl.value === 'Mendoza') {
+      return {
+        validateName: true
+      };
+    }
+    return null;
+  }
 }
+
