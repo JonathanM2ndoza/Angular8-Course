@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { promise } from 'protractor';
 
 @Component({
   selector: 'app-data',
@@ -36,6 +38,7 @@ export class DataComponent {
       hobby: new FormArray([
         new FormControl('English', Validators.required)
       ]),
+      username: new FormControl('', Validators.required, this.validateUsername),
       password1: new FormControl('', Validators.required),
       password2: new FormControl()
     });
@@ -83,5 +86,22 @@ export class DataComponent {
     }
     return null;
   }
+
+  validateUsername(formControl: FormControl): Promise<any>|Observable<any> {
+
+    let promise1 = new Promise(
+      (resolve, reject) => {
+        setTimeout( () => {
+          if (formControl.value === 'jmendoza') {
+            resolve({validate: true});
+          } else {
+            resolve(null);
+          }
+        }, 3000);
+      });
+
+    return promise1;
+  }
+
 }
 
