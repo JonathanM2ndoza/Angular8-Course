@@ -3,6 +3,10 @@ import { HeroModel } from '../../models/hero.model';
 import { NgForm } from '@angular/forms';
 import { HeroesService } from '../../services/heroes.service';
 
+import Swal from 'sweetalert2';
+
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
@@ -21,9 +25,29 @@ export class HeroComponent implements OnInit {
       console.log('Form no valid');
       return;
     }
-    this.heroesService.createHero(this.hero).subscribe( resp => {
-      console.log(resp);
-    });
-  }
 
+    Swal.fire({
+      title: 'Espere',
+      text: 'Guardando información',
+      icon: 'info',
+      allowOutsideClick: false
+    });
+    Swal.showLoading();
+
+    let petition: Observable<any>;
+
+    if (this.hero.id) {
+      petition = this.heroesService.updateHero(this.hero);
+    } else {
+      petition = this.heroesService.createHero(this.hero);
+    }
+    petition.subscribe( resp => {
+      Swal.fire({
+        title: this.hero.name,
+        text: 'Se actualizó exitosamente',
+        icon: 'success'
+      });
+    });
+
+  }
 }
