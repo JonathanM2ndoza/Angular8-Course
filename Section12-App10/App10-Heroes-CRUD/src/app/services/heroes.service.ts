@@ -29,4 +29,27 @@ export class HeroesService {
     delete heroTemp.id;
     return this.httpClient.put(`${ this.url }/heroes/${hero.id}.json`, heroTemp);
   }
+
+  getHeroes() {
+    return this.httpClient.get(`${ this.url }/heroes.json`)
+                .pipe(
+                  map( resp => this.createArrayHeroes(resp))
+                );
+  }
+
+  private createArrayHeroes(arrayFirebase: Object) {
+    const heroes: HeroModel[] = [];
+    console.log(arrayFirebase);
+
+    if (arrayFirebase === null) { return []; }
+
+    Object.keys(arrayFirebase).forEach( key => {
+      const hero: HeroModel = arrayFirebase[key];
+      hero.id = key;
+      heroes.push(hero);
+    }
+    );
+
+    return heroes;
+  }
 }
