@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroModel } from '../../models/hero.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-hero',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
+  hero: HeroModel = new HeroModel();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  save(form: NgForm) {
+    if (form.invalid) {
+      console.log('Form no valid');
+      return;
+    }
+    console.log(form);
+    console.log(this.hero);
   }
 
 }
