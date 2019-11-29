@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroModel } from '../../models/hero.model';
 import { NgForm } from '@angular/forms';
+import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-hero',
@@ -10,18 +11,19 @@ import { NgForm } from '@angular/forms';
 export class HeroComponent implements OnInit {
 
   hero: HeroModel = new HeroModel();
-  constructor() { }
+  constructor(private heroesService: HeroesService) { }
 
   ngOnInit() {
   }
 
-  save(form: NgForm) {
+  createHero(form: NgForm) {
     if (form.invalid) {
       console.log('Form no valid');
       return;
     }
-    console.log(form);
-    console.log(this.hero);
+    this.heroesService.createHero(this.hero).subscribe( resp => {
+      console.log(resp);
+    });
   }
 
 }
