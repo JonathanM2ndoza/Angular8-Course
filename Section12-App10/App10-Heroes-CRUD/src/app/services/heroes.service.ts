@@ -37,6 +37,10 @@ export class HeroesService {
                 );
   }
 
+  getHero(id: string) {
+    return this.httpClient.get(`${this.url}/heroes/${id}.json`);
+  }
+
   private createArrayHeroes(arrayFirebase: Object) {
     const heroes: HeroModel[] = [];
     console.log(arrayFirebase);
