@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Example App10 - Angular: HTTP-CRUD-Firebase, sweetalert2
+
+![Screenshot](../Prtsc/Section12-App10_1.png)
+
+![Screenshot](../Prtsc/Section12-App10_2.png)
+
+![Screenshot](../Prtsc/Section12-App10_3.png)
+
+![Screenshot](../Prtsc/Section12-App10_4.png)
+
+![Screenshot](../Prtsc/Section12-App10_5.png)
+
+![Screenshot](../Prtsc/Section12-App10_6.png)
+
+![Screenshot](../Prtsc/Section12-App10_7.png)
+
+![Screenshot](../Prtsc/Section12-App10_8.png)
+
+![Screenshot](../Prtsc/Section12-App10_9.png)
