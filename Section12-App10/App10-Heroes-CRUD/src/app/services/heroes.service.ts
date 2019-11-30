@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HeroModel } from '../models/hero.model';
-import { map } from 'rxjs/operators';
+import { map, delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -33,12 +33,16 @@ export class HeroesService {
   getHeroes() {
     return this.httpClient.get(`${ this.url }/heroes.json`)
                 .pipe(
-                  map( resp => this.createArrayHeroes(resp))
+                  map( resp => this.createArrayHeroes(resp)), delay(500)
                 );
   }
 
   getHero(id: string) {
     return this.httpClient.get(`${this.url}/heroes/${id}.json`);
+  }
+
+  deleteHero(id: string) {
+    return this.httpClient.delete(`${this.url}/heroes/${id}.json`);
   }
 
   private createArrayHeroes(arrayFirebase: Object) {
