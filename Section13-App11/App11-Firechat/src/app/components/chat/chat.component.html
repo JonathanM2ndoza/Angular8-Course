@@ -2,7 +2,13 @@
 <hr>
 
 <div class="app-mensajes" id="app-mensajes">
-    <div class="text-right">
+    <div class="text-right" *ngFor="let chat of chatService.chats">
+        <span class="badge badge-primary">Jonathan</span>
+        <p>
+            {{chat.message}}
+        </p>
+    </div>
+    <!-- <div class="text-right">
         <span class="badge badge-primary">Jonathan</span>
         <p>
             Este es un mensaje de chat
@@ -14,7 +20,7 @@
         <p>
             Este es un mensaje de chat
         </p>
-    </div>
+    </div> -->
 </div>
 
 <input type="text" class="form-control" name="message" [(ngModel)]="message" (keyup.enter)="sendMessage()"
