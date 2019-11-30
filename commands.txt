@@ -97,3 +97,9 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/App
 
 ##############Install Auth0##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course$ sudo npm install @auth0/auth0-spa-js --save
+
+##############Install AngularFire and Firebase##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section13-App11/App11-Firechat$ npm install @angular/fire firebase --save
+
+https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
+
