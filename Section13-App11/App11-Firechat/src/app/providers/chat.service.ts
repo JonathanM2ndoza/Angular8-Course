@@ -25,7 +25,12 @@ export class ChatService {
   }
 
   login(provider: string) {
-    this.angularFireAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    if ( provider === 'Google'){
+      this.angularFireAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    } else {
+      // TODO: No run because Developer account is pending on Twitter.
+      this.angularFireAuth.auth.signInWithPopup(new auth.TwitterAuthProvider());
+    }
   }
   logout() {
     this.userFirebase = {};
@@ -49,9 +54,10 @@ export class ChatService {
 
   createMessage(text: string) {
     let message: Message = {
-      name: 'Demo',
+      name: this.userFirebase.name,
       message: text,
-      date: new Date().getTime()
+      date: new Date().getTime(),
+      uid: this.userFirebase.uid
     };
 
     return this.itemsCollection.add(message);
