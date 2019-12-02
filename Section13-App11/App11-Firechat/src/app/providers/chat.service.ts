@@ -14,11 +14,16 @@ export class ChatService {
   }
 
   loadMessages() {
-    this.itemsCollection = this.angularFirestore.collection<Message>('chats');
+    this.itemsCollection = this.angularFirestore.collection<Message>('chats', ref => ref.orderBy('date', 'desc')
+                                                                                        .limit(5) );
     return this.itemsCollection.valueChanges()
                                .pipe( map( (message: Message[]) => {
                                       console.log(message);
-                                      this.chats = message;
+                                      this.chats = [];
+                                      for (const m of message) {
+                                        this.chats.unshift(m);
+                                      }
+                                      return this.chats;
                                       })
                                    );
   }
