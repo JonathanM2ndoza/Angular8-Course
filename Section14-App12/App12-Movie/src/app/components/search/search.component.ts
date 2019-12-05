@@ -18,13 +18,12 @@ export class SearchComponent implements OnInit {
               private movieArrayPipe: MovieArrayPipe,
               public activatedRoute: ActivatedRoute) {
 
-              this.activatedRoute.params.subscribe(params => {
-              console.log(params);
-              if (params['text']) {
-                this.search = params['text'];
-                this.getMovie();
-              } 
-              });
+                this.activatedRoute.params.subscribe(params => {
+                console.log(params);
+                if (params['text']) {
+                  this.search = params['text'];
+                  this.getMovie();
+                }});
               }
 
   ngOnInit() {

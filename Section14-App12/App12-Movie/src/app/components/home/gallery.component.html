@@ -7,19 +7,32 @@
         <div class="col-sm-6">
 
             <div class="row">
-                <div class="col-md-12 div-pic-1"
+                <div
+                    [routerLink]="['/movie',billboard[0].id,'home']" 
+                    class="col-md-12 div-pic-1 puntero"
                     [ngStyle]="{ 'background-image': 'url( ' + (billboard[0] | movieImage) + ' )'  }">
+                    <p class="pic-titulo">
+                        {{billboard[0].original_title}}
+                    </p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-sm-6 div-pic-2"
+                <div
+                    [routerLink]="['/movie',billboard[1].id,'home']"  
+                    class="col-sm-6 div-pic-2 puntero"
                     [ngStyle]="{ 'background-image': 'url(  ' + (billboard[1] | movieImage) + ' )'  }">
-                    
+                    <p class="pic-titulo">
+                        {{billboard[1].original_title}}
+                    </p>
                 </div>
-                <div class="col-sm-6 div-pic-2"
+                <div
+                    [routerLink]="['/movie',billboard[2].id,'home']"  
+                    class="col-sm-6 div-pic-2 puntero"
                     [ngStyle]="{ 'background-image': 'url(  ' + (billboard[2] | movieImage) + '  )'  }">
-                    
+                    <p class="pic-titulo">
+                        {{billboard[2].original_title}}
+                    </p>
                 </div>
             </div>
 
@@ -28,19 +41,32 @@
         <div class="col-sm-6">
 
             <div class="row">
-                <div class="col-sm-6 div-pic-2"
+                <div
+                    [routerLink]="['/movie',billboard[3].id,'home']"  
+                    class="col-sm-6 div-pic-2 puntero"
                     [ngStyle]="{ 'background-image': 'url(  ' + (billboard[3] | movieImage) + '  )'  }">
-                    
+                    <p class="pic-titulo">
+                        {{billboard[3].original_title}}
+                    </p>
                 </div>
-                <div class="col-sm-6 div-pic-2"
+                <div
+                    [routerLink]="['/movie',billboard[4].id,'home']"   
+                    class="col-sm-6 div-pic-2 puntero"
                     [ngStyle]="{ 'background-image': 'url(  ' + (billboard[4] | movieImage) + '  )'  }">
-                    
+                    <p class="pic-titulo">
+                        {{billboard[4].original_title}}
+                    </p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-12 div-pic-1"
+                <div
+                    [routerLink]="['/movie',billboard[5].id,'home']"   
+                    class="col-md-12 div-pic-1 puntero"
                     [ngStyle]="{ 'background-image': 'url(  ' + (billboard[5] | movieImage) + ' )'  }">
+                    <p class="pic-titulo">
+                        {{billboard[5].original_title}}
+                    </p>
                 </div>
             </div>
 

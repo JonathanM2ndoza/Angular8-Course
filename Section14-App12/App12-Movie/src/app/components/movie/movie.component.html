@@ -1,1 +1,35 @@
-<p>movie works!</p>
+<div
+    *ngIf="movie"
+    class="container main-container animated fadeIn fast">
+
+    <h1>{{movie.original_title}}</h1>
+
+    <div class="row">
+        <div class="col-md-5">
+            <img [src]="movie | movieImage:true" [alt]="movie.original_title"
+                 class="img-thumbnail img-fluid">
+        </div>
+
+        <div class="col-md-7">
+            <h3>Sinopsis</h3>
+            <hr>
+            <p class="text-justify">
+                {{movie.overview}}
+            </p>
+            <h4 *ngIf="movie.tagline">Frase célebre</h4>
+            <p>
+                {{movie.tagline}}
+            </p>
+            <p>
+                Popularidad: <span class="badge badge-primary"> {{movie.popularity}}</span>
+                <br>
+                Voto promedio: <span class="badge badge-primary"> {{movie.vote_average}} </span>
+            </p>
+            <button [routerLink]="['/'+prevPage, searchText]"
+                    type="button" class="btn btn-outline-danger">
+            Regresar
+            </button>
+        </div>
+    </div>
+
+</div>

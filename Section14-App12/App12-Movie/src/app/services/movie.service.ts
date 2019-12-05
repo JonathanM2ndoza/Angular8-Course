@@ -41,4 +41,8 @@ export class MovieService {
     return this.http.jsonp(url.concat(this.urlCall), 'JSONP_CALLBACK');
   }
 
+  getMovieById(id: string) {
+    let url = `${this.urlApi}/movie/${id}?api_key=${this.apiKey}`;
+    return this.http.jsonp(url.concat(this.urlCall), 'JSONP_CALLBACK');
+  }
 }

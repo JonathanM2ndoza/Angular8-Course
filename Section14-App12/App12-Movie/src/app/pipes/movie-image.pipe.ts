@@ -5,8 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MovieImagePipe implements PipeTransform {
 
-  transform(movie: any): any {
+  transform(movie: any, poster: boolean = false): any {
     let url = 'http://image.tmdb.org/t/p/w500';
+
+    if (poster) {
+      return url + movie.poster_path;
+    }
 
     if (movie.backdrop_path) {
       return url + movie.backdrop_path;
