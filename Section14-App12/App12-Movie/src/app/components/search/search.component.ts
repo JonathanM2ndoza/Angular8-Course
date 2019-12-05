@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
 import { MovieArrayPipe } from '../../pipes/movie-array.pipe';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -14,7 +15,17 @@ export class SearchComponent implements OnInit {
   searchMovies: Array<any>;
 
   constructor(public movieService: MovieService,
-              private movieArrayPipe: MovieArrayPipe) { }
+              private movieArrayPipe: MovieArrayPipe,
+              public activatedRoute: ActivatedRoute) {
+
+              this.activatedRoute.params.subscribe(params => {
+              console.log(params);
+              if (params['text']) {
+                this.search = params['text'];
+                this.getMovie();
+              } 
+              });
+              }
 
   ngOnInit() {
   }
@@ -23,9 +34,9 @@ export class SearchComponent implements OnInit {
     if (this.search.length === 0) {
       return;
     }
-    this.movieService.getMovie(this.search).subscribe(resp => {this.searchMovies = this.movieArrayPipe.transform(resp);  console.log(this.searchMovies) });
-   
-    
+    this.movieService.getMovie(this.search).subscribe(resp => {
+      this.searchMovies = this.movieArrayPipe.transform(resp);  console.log(this.searchMovies);
+    });
   }
 
 }
