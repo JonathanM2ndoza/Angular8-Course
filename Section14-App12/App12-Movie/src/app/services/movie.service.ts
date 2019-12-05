@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ export class MovieService {
   private apiKey: string = '875e616ad3c852344530e557e9861de5';
   private urlApi: string = 'https://api.themoviedb.org/3';
   private urlCall: string = '&language=es&callback=JSONP_CALLBACK';
+  movies: any;
 
   constructor(private http: HttpClient) { }
 
@@ -37,7 +38,7 @@ export class MovieService {
 
   getPopularKidsMovies() {
     let url = `${this.urlApi}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=${this.apiKey}`;
-    return this.http.jsonp(url.concat('&callback=JSONP_CALLBACK'), 'JSONP_CALLBACK');
+    return this.http.jsonp(url.concat(this.urlCall), 'JSONP_CALLBACK');
   }
 
 }
