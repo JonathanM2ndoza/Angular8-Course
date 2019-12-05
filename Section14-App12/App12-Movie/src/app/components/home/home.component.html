@@ -7,8 +7,11 @@
 
 <div class="container">
     <br>
-    <div class="row">
-        <h1>Cartelera</h1>
-        <hr>
-    </div>
+
+    <app-gallery [billboard]="billboard | slice:0:6" title="Películas en Cartelera"></app-gallery>
+
+    <app-gallery [billboard]="popularMovie | slice:0:6" title="Películas populares"></app-gallery>
+
+    <app-gallery [billboard]="popularKidsMovies | slice:0:6" title="Películas populares entre los niños"></app-gallery>
+
 </div>

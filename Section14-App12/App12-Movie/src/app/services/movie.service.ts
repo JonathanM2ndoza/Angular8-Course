@@ -35,4 +35,9 @@ export class MovieService {
     return this.http.jsonp(url.concat(this.urlCall), 'JSONP_CALLBACK');
   }
 
+  getPopularKidsMovies() {
+    let url = `${this.urlApi}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=${this.apiKey}`;
+    return this.http.jsonp(url.concat('&callback=JSONP_CALLBACK'), 'JSONP_CALLBACK');
+  }
+
 }
