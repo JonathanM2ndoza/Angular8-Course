@@ -103,3 +103,10 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section13-App11/A
 
 https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
 
+##############Install Angular Material##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section15-App13/App13-Maps$ ng add @angular/material
+Installing packages for tooling via npm.
+Installed packages for tooling via npm.
+? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink        [ Preview: https://material.angular.io?theme=indigo-pink ]
+? Set up HammerJS for gesture recognition? Yes
+? Set up browser animations for Angular Material? Yes
