@@ -34,4 +34,9 @@ export class HomeComponent implements OnInit {
     $('#myModal').modal('hide');
   }
 
+  loadMoreVideos() {
+    this.youtubeService.getVideos()
+    .subscribe(videos => this.videos.push.apply(this.videos, videos));
+  }
+
 }
