@@ -2,5 +2,32 @@
     <h1>Canal de YouTube</h1>
     <hr>
 
+    <div class="card-columns" *ngIf="videos.length > 0">
+        <div class="card" *ngFor="let video of videos">
+            <img [src]="video.thumbnails.high.url" class="card-img-top" [alt]="video.title">
+            <div class="card-body">
+                <h5 class="card-title">{{video.title}}</h5>
+                <button (click)="getVideo(video)" type="button" class="btn btn-outline-primary btn-block">
+                    Ver Video
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" *ngIf="videoSelect">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{videoSelect.title}}</h5>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="300" [src]="videoSelect.resourceId.videoId | domseguro: 'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
