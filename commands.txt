@@ -125,3 +125,21 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course$  sudo npm instal
 
 ##############Deploy - Producción##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section17-App15/App15-Deploy$ sudo ng build --prod
+
+
+##############Actualizar CLI##############
+
+npm uninstall -g angular-cli
+npm uninstall --save-dev angular-cli
+Para actualizar el Angular CLI a la última version, necesitamos actualizar ambos en el paquete global  y el en proyecto.
+
+Paquete global:
+
+npm uninstall -g @angular/cli
+npm cache clean
+npm install -g @angular/cli@latest
+Paquete local del proyecto:
+
+rm -rf node_modules dist # use rmdir /S/Q node_modules dist in Windows Command Prompt; use rm -r -fo node_modules,dist in Windows PowerShell
+npm install --save-dev @angular/cli@latest
+npm install
