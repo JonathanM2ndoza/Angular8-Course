@@ -29,3 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Example App17 - Angular Graphics
 
 ![Screenshot](../Prtsc/Section21-App17_1.png)
+
+![Screenshot](../Prtsc/Section21-App17_2.png)
+
+![Screenshot](../Prtsc/Section21-App17_3.png)
+
+![Screenshot](../Prtsc/Section21-App17_4.png)
