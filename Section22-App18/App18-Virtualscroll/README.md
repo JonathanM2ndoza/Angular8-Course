@@ -29,3 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Example App18 - Virtualscroll
 
 ![Screenshot](../Prtsc/Section22-App18_1.png)
+
+![Screenshot](../Prtsc/Section22-App18_2.png)
