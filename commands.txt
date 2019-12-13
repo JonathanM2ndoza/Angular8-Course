@@ -130,6 +130,11 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section17-App15/A
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section21-App17/App16-Graphics$ sudo npm install --save ng2-charts
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section21-App17/App16-Graphics$ npm install --save chart.js
 
+##############Install CDK##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section22-App18/App18-Virtualscroll$ npm install --save @angular/material @angular/cdk
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section22-App18/App18-Virtualscroll$ rm -rf node_modules
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section22-App18/App18-Virtualscroll$ npm install
+
 ##############Actualizar CLI##############
 
 npm uninstall -g angular-cli
