@@ -31,3 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![Screenshot](../Prtsc/Section22-App18_1.png)
 
 ![Screenshot](../Prtsc/Section22-App18_2.png)
+
+![Screenshot](../Prtsc/Section22-App18_3.png)
