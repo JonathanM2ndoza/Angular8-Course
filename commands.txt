@@ -79,6 +79,12 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section4-App2/App
     "node_modules/bootstrap/dist/js/bootstrap.min.js"
 ]
 
+##############sweetalert2##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Frontend$ npm install sweetalert2
+
+##############ngx-charts##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Frontend$ npm install @swimlane/ngx-charts --save
+
 ##############Ionic##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5$ ionic start App5-WishList tabs
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section7-App5/WishList-App5$ ionic serve -c
