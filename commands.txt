@@ -112,7 +112,14 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section13-App11/A
 
 https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
 
+#####Cloud Functions for Firebase
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course$ sudo npm install -g firebase-tools
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend$ sudo firebase login
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend$ sudo firebase deploy
 
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend$ sudo firebase serve
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend/functions$ sudo npm run build 
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend/functions$ tsc --watch
 
 ##############Install Angular Material##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section15-App13/App13-Maps$ ng add @angular/material
