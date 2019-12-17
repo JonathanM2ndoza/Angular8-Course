@@ -121,6 +121,11 @@ jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/A
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend/functions$ sudo npm run build 
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend/functions$ tsc --watch
 
+##############Install Express##############
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend/functions$ sudo npm install express cors
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend/functions$ sudo npm install @types/express --save-dev
+jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section23-App19/App19-Backend/functions$ sudo npm install @types/cors --save-dev
+
 ##############Install Angular Material##############
 jmendoza@jmendoza-ThinkPad-T420:~/IdeaProjects/Angular8-Course/Section15-App13/App13-Maps$ ng add @angular/material
 Installing packages for tooling via npm.
