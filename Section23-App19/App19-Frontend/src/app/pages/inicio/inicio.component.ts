@@ -24,7 +24,5 @@ export class InicioComponent implements OnInit {
         // console.log(juegos);
         this.juegos = juegos;
       });
-
   }
-
 }
