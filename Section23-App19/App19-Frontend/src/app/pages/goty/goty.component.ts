@@ -3,7 +3,7 @@ import { GameService } from '../../services/game.service';
 
 import { Game } from '../../interfaces/interfaces';
 
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -28,14 +28,14 @@ export class GotyComponent implements OnInit {
   }
 
   votarJuego( juego: Game ) {
-    
+
     this.gameService.votarJuego( juego.id )
       .subscribe( (resp: {ok: boolean, mensaje: string }) => {
 
         if ( resp.ok ) {
-          Swal.fire('Gracias',resp.mensaje, 'success' );
+          Swal.fire('Gracias', resp.mensaje, 'success' );
         } else {
-          Swal.fire('Oops',resp.mensaje, 'error' );
+          Swal.fire('Oops', resp.mensaje, 'error' );
         }
 
       });

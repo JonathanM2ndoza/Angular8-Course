@@ -37,13 +37,12 @@ export class GameService {
 
   votarJuego( id: string) {
 
-    return this.http.post(`${ environment.url }/api/goty/${ id }`,{})
+    return this.http.post(`${ environment.url }/api/goty/${ id }`, {})
         .pipe(
           catchError( err => {
             return of( err.error );
           })
-        )
-
+        );
   }
 
 }

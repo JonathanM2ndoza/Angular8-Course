@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Example App19Frontend - API, Cloud Functions for Firebase
+
+![Screenshot](../Prtsc/Section23-App19-front_1.png)
+
+![Screenshot](../Prtsc/Section23-App19-front_2.png)
+
+![Screenshot](../Prtsc/Section23-App19-front_3.png)
+
+![Screenshot](../Prtsc/Section23-App19-front_4.png)
+
+![Screenshot](../Prtsc/Section23-App19-front_5.png)
+
+![Screenshot](../Prtsc/Section23-App19-front_6.png)
