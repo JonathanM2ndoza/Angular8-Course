@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
-  url: 'https://us-central1-firestore-grafica.cloudfunctions.net',
+  url: 'https://us-central1-app-vote-e2401.cloudfunctions.net',
   firebase: {
-    apiKey: 'AIzaSyDp7dN73ICrxNe8LFrQR_Xl71jIc1uoRmQ',
-    authDomain: 'firestore-grafica.firebaseapp.com',
-    databaseURL: 'https://firestore-grafica.firebaseio.com',
-    projectId: 'firestore-grafica',
-    storageBucket: 'firestore-grafica.appspot.com',
-    messagingSenderId: '66843363918',
-    appId: '1:66843363918:web:1eb42e48ff340b2c5d911f'
+    apiKey: 'AIzaSyAij6oH3W1mbLg8GMWK9HT0jsrKQORhzpM',
+    authDomain: 'app-vote-e2401.firebaseapp.com',
+    databaseURL: 'https://app-vote-e2401.firebaseio.com',
+    projectId: 'app-vote-e2401',
+    storageBucket: 'app-vote-e2401.appspot.com',
+    messagingSenderId: '466494665108',
+    appId: '1:466494665108:web:ecc4f978d64aa418629f81'
   }
 };
