@@ -43,6 +43,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Example App19Frontend - API, Cloud Functions for Firebase (Cloud)
 
+https://app-vote-e2401.firebaseapp.com
+
 ![Screenshot](../Prtsc/Section23-App19-front_7.png)
 
 ![Screenshot](../Prtsc/Section23-App19-front_8.png)
