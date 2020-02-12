@@ -50,3 +50,18 @@ TemplateUrl, Bootstrap 4, Structural Directives NgIf-NgFor
 ### Section4
 SPA, Angular CLI, Angular Router, RouterLink, RouterLinkActive, ActivatedRoute
 
+### Section5
+Angular Pipes: uppercase, lowercase, slice, decimal, percent, currency, json, async, date and custom pipe.
+
+### Section6
+Spotify API and HttpClient, RxJS Operators in Angular, Observable: Error Handling
+
+### Section7
+Ionic Framework 5, Alert Controller, LocalStorage
+
+### Section8
+Directives: ngStyle, ngClass, ngSwitch. Child routes
+
+
+
+
