@@ -38,12 +38,15 @@ Some of the technologies used in this course:
 
 - Other Technologies
 
-## Section1-Introduction
+### Section1-Introduction
 Minimum installations and configurations necessary
 
-## Section2-TypeScript
+### Section2
 Introduction to TypeScript and ES6
 
-## Section3-App1
+### Section3
 TemplateUrl, Bootstrap 4, Structural Directives NgIf-NgFor
+
+### Section4
+SPA, Angular CLI, Angular Router, RouterLink, RouterLinkActive, ActivatedRoute
 
